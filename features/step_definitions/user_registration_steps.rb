@@ -3,7 +3,7 @@ Given("I am on the homepage") do
 end
 
 Given("I click on the registration link") do
-  pending # Write code here that turns the phrase above into concrete actions
+  click_on "registration-link"
 end
 
 When("I fill in and submit the registration from") do

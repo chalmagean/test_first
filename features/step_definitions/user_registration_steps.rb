@@ -1,5 +1,5 @@
 Given("I am on the homepage") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit "/"
 end
 
 Given("I click on the registration link") do

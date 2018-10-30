@@ -19,5 +19,5 @@ Then("I should see a registration confirmation message") do
 end
 
 Then("I should receive a confirmation email") do
-  pending # Write code here that turns the phrase above into concrete actions
+  step %{I should receive an email}
 end

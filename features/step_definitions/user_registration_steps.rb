@@ -15,7 +15,7 @@ When("I fill in and submit the registration from") do
 end
 
 Then("I should see a registration confirmation message") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content("Welcome")
 end
 
 Then("I should receive a confirmation email") do

@@ -21,3 +21,15 @@ end
 Then("I should receive a confirmation email") do
   step %{"jdoe@example.com" should receive an email}
 end
+
+Given("I already have an account") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+When("I try to register with the same email") do
+  pending # Write code here that turns the phrase above into concrete actions
+end
+
+Then("I should see an error message") do
+  pending # Write code here that turns the phrase above into concrete actions
+end

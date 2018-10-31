@@ -9,3 +9,8 @@ Feature: User registration
     When I fill in and submit the registration from
     Then I should see a registration confirmation message
     And I should receive a confirmation email
+
+  Scenario: I can't use the same email twice
+    Given I already have an account
+    When I try to register with the same email
+    Then I should see an error message

@@ -32,7 +32,13 @@ Given("I already have an account") do
   click_on "user_registration_submit"
 end
 
+When("I sign out") do
+  click_on "signout_link"
+  expect(page).to have_content("Signed out successfully")
+end
+
 When("I try to register with the same email") do
+  step %{I sign out}
   step %{I already have an account}
 end
 

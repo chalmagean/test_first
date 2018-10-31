@@ -19,5 +19,5 @@ Then("I should see a registration confirmation message") do
 end
 
 Then("I should receive a confirmation email") do
-  step %{I should receive an email}
+  step %{"jdoe@example.com" should receive an email}
 end

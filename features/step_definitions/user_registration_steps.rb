@@ -23,13 +23,19 @@ Then("I should receive a confirmation email") do
 end
 
 Given("I already have an account") do
-  pending # Write code here that turns the phrase above into concrete actions
+  visit "/"
+  click_on "registration-link"
+  fill_in "user_name", with: "jdoe"
+  fill_in "user_email", with: "jdoe@example.com"
+  fill_in "user_password", with: "secret1234"
+  fill_in "user_password_confirmation", with: "secret1234"
+  click_on "user_registration_submit"
 end
 
 When("I try to register with the same email") do
-  pending # Write code here that turns the phrase above into concrete actions
+  step %{I already have an account}
 end
 
 Then("I should see an error message") do
-  pending # Write code here that turns the phrase above into concrete actions
+  expect(page).to have_content("Email has already been taken")
 end

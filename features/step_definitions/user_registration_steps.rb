@@ -18,6 +18,10 @@ Then("I should see a registration confirmation message") do
   expect(page).to have_content("Welcome")
 end
 
+Then("I should see my name on the page") do
+  expect(page).to have_content("Hi jdoe")
+end
+
 Then("I should receive a confirmation email") do
   step %{"jdoe@example.com" should receive an email}
 end

@@ -8,6 +8,7 @@ Feature: User registration
     And I click on the registration link
     When I fill in and submit the registration from
     Then I should see a registration confirmation message
+    And I should see my name on the page
     And I should receive a confirmation email
 
   Scenario: I can't use the same email twice

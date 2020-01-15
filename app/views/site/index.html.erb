@@ -1,1 +1,5 @@
 <%= link_to "Registration", new_user_registration_path, id: "registration-link" %>
+
+<% if user_signed_in? %>
+  Hi <%= current_user.name %>
+<% end %>

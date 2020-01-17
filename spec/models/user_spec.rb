@@ -9,5 +9,13 @@ RSpec.describe User, type: :model do
         expect(user.errors.keys).to include(:name)
       end
     end
+
+    context "when the name is less than 2 characters" do
+      it "the user is invalid" do
+        user = User.new(name: "a")
+        user.valid?
+        expect(user.errors.keys).to include(:name)
+      end
+    end
   end
 end

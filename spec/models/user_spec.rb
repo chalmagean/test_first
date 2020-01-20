@@ -17,5 +17,13 @@ RSpec.describe User, type: :model do
         expect(user.errors.keys).to include(:name)
       end
     end
+
+    context "when the name contains emojis" do
+      it "the user is invalid" do
+        user = User.new(name: "Hi 🤨")
+        user.valid?
+        expect(user.errors.keys).to include(:name)
+      end
+    end
   end
 end
